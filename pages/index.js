@@ -1,10 +1,11 @@
 import Head from "next/Head";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import CreditScoreBar from "./components/CreditScoreBar";
 
 function Home() {
   return (
-    <div className="border border-red-500 max-w-5xl mx-auto">
+    <div className="max-w-7xl mx-auto px-28 border">
       <Head>
         <title>Chace</title>
       </Head>
@@ -16,6 +17,7 @@ function Home() {
       <Hero />
 
       {/* score bar section */}
+      <CreditScoreBar />
 
       {/* why animated cards */}
 

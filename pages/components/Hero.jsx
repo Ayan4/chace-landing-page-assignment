@@ -3,14 +3,14 @@ import { BsWhatsapp } from "react-icons/bs";
 
 function Hero() {
   return (
-    <div className="mt-20 flex flex-col items-center">
+    <div className="mt-24 flex flex-col items-center">
       <h1 className="text-[5rem] text-center font-bold leading-tight">
         the simplest way to <br /> build your{" "}
         <span className="text-primary">credit score</span>
       </h1>
-      <p className="text-center text-2xl flex items-center text-gray-400 mt-10 font-medium">
+      <div className="text-center text-2xl flex items-center text-gray-400 mt-10 font-medium">
         join{" "}
-        <span className="flex relative items-center mx-2 w-28 justify-center">
+        <div className="flex relative items-center mx-2 w-28 justify-center">
           <div className="absolute left-0">
             <Image
               height={40}
@@ -43,11 +43,11 @@ function Hero() {
               alt="user"
             />
           </div>
-        </span>{" "}
+        </div>{" "}
         in building your financial credibility
-      </p>
+      </div>
 
-      <div className="flex items-center justify-between mt-10">
+      <div className="flex items-center justify-between mt-14">
         <button className="px-24 py-5 bg-primary rounded-lg text-black text-lg font-semibold mr-6 filter hover:brightness-110">
           start building
         </button>
