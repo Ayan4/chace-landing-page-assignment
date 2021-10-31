@@ -1,6 +1,43 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import data from "../../scoreData.json";
+
+const data = {
+  "very poor": {
+    heading: "very poor",
+    score: "300-500",
+    description:
+      "There is a high probability of your loan and credit card applications getting rejected. In case of approval, you are unlikely to get the lowest interest rate.",
+    source: "https://www.chace.co.in/images/gradient-scorecard.png"
+  },
+  poor: {
+    heading: "poor",
+    score: "501-650",
+    description:
+      "You will have a slightly higher chance of getting approved for loans. However, the interest rates offered may be on the higher side.",
+    source: "https://www.chace.co.in/images/gradient-scorecard.png"
+  },
+  average: {
+    heading: "average",
+    score: "651-700",
+    description:
+      "You are quite likely to get approved for financial products and a large number of lenders will consider offering you a loan or credit card.",
+    source: "https://www.chace.co.in/images/gradient-scorecard.png"
+  },
+  good: {
+    heading: "good",
+    score: "751-800",
+    description:
+      "You might get better than the average interest rate on your loans and most lenders will be willing to offer you loans basis your credit score.",
+    source: "https://www.chace.co.in/images/gradient-scorecard.png"
+  },
+  excellent: {
+    heading: "excellent",
+    score: "851-900",
+    description:
+      "With score categorised as excellent, you will get the best possible loan interest rate and will also receive top credit card offers from the lenders.",
+    source: "https://www.chace.co.in/images/gradient-scorecard-last.png"
+  }
+};
 
 function ScoreBar() {
   const [selectedBar, setSelectedBar] = useState("average");
@@ -17,44 +54,6 @@ function ScoreBar() {
       window.removeEventListener("resize", updateSize);
     };
   });
-
-  const data = {
-    "very poor": {
-      heading: "very poor",
-      score: "300-500",
-      description:
-        "There is a high probability of your loan and credit card applications getting rejected. In case of approval, you are unlikely to get the lowest interest rate.",
-      source: "https://www.chace.co.in/images/gradient-scorecard.png"
-    },
-    poor: {
-      heading: "poor",
-      score: "501-650",
-      description:
-        "You will have a slightly higher chance of getting approved for loans. However, the interest rates offered may be on the higher side.",
-      source: "https://www.chace.co.in/images/gradient-scorecard.png"
-    },
-    average: {
-      heading: "average",
-      score: "651-700",
-      description:
-        "You are quite likely to get approved for financial products and a large number of lenders will consider offering you a loan or credit card.",
-      source: "https://www.chace.co.in/images/gradient-scorecard.png"
-    },
-    good: {
-      heading: "good",
-      score: "751-800",
-      description:
-        "You might get better than the average interest rate on your loans and most lenders will be willing to offer you loans basis your credit score.",
-      source: "https://www.chace.co.in/images/gradient-scorecard.png"
-    },
-    excellent: {
-      heading: "excellent",
-      score: "851-900",
-      description:
-        "With score categorised as excellent, you will get the best possible loan interest rate and will also receive top credit card offers from the lenders.",
-      source: "https://www.chace.co.in/images/gradient-scorecard-last.png"
-    }
-  };
 
   return (
     <div className="mt-20 mb-80 relative">
@@ -158,8 +157,6 @@ function ScoreBar() {
         className={`absolute top-14 w-[21.5rem] left-0 transition-all duration-700 ease-in-out`}
       >
         <Image
-          // width={340}
-          // height={190}
           width={screenWidth < 640 ? "600" : "340"}
           height={screenWidth < 640 ? "370" : "190"}
           src={data[selectedBar].source}

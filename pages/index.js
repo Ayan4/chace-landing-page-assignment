@@ -13,29 +13,13 @@ function Home() {
       <Head>
         <title>Chace</title>
       </Head>
-
-      {/* Nav */}
       <Navbar />
-
-      {/* Hero */}
       <Hero />
-
-      {/* score bar section */}
       <CreditScoreBar />
-
-      {/* why animated cards */}
       <AnimatedCards />
-
-      {/* How chase helps you */}
       <ChaceHelp />
-
-      {/* CTA and video */}
       <VideoContainer />
-
-      {/* partnering with chace */}
       <GetStartedCard />
-
-      {/* get started and footer */}
     </div>
   );
 }
