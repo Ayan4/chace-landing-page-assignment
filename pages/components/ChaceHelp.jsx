@@ -4,14 +4,16 @@ import { BsChevronRight } from "react-icons/bs";
 function ChaceHelp() {
   return (
     <div className="mb-48">
-      <div className="flex flex-col items-center">
-        <h2 className="text-5xl text-primary font-bold text-center leading-tight">
+      <div className="flex flex-col sm:items-center items-start">
+        <h2 className="sm:text-5xl text-3xl text-primary font-bold sm:text-center text-left leading-tight">
           how chace helps you <br /> build your credit score?
         </h2>
-        <p className="mt-6 text-3xl">designed to be effortless for everyone</p>
+        <p className="mt-6 text-3xl sm:block hidden">
+          designed to be effortless for everyone
+        </p>
       </div>
 
-      <div className="flex mt-16 justify-between">
+      <div className="flex sm:flex-row flex-col mt-16 justify-between sm:items-start items-center">
         <div className="flex flex-col items-center w-60">
           <Image
             src="https://www.chace.co.in/images/features-1.png"
@@ -28,8 +30,8 @@ function ChaceHelp() {
           </div>
         </div>
 
-        <div className="mt-28">
-          <BsChevronRight className="text-2xl text-primary" />
+        <div className="sm:mt-28 my-12">
+          <BsChevronRight className="sm:text-2xl text-4xl text-primary transform sm:rotate-0 rotate-90" />
         </div>
 
         <div className="flex flex-col items-center w-60">
@@ -49,8 +51,8 @@ function ChaceHelp() {
           </div>
         </div>
 
-        <div className="mt-28">
-          <BsChevronRight className="text-2xl text-primary" />
+        <div className="sm:mt-28 my-12">
+          <BsChevronRight className="sm:text-2xl text-4xl text-primary transform sm:rotate-0 rotate-90" />
         </div>
 
         <div className="flex flex-col items-center w-60">

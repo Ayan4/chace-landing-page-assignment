@@ -4,13 +4,13 @@ import { BsWhatsapp } from "react-icons/bs";
 function Hero() {
   return (
     <div className="mt-24 flex flex-col items-center">
-      <h1 className="text-[5rem] text-center font-bold leading-tight">
+      <h1 className="sm:text-[5rem] text-5xl text-center font-bold leading-tight">
         the simplest way to <br /> build your{" "}
         <span className="text-primary">credit score</span>
       </h1>
-      <div className="text-center text-2xl flex items-center text-gray-400 mt-10 font-medium">
-        join{" "}
-        <div className="flex relative items-center mx-2 w-28 justify-center">
+      <div className="text-center sm:text-2xl text-lg flex items-center text-gray-400 sm:mt-10 mt-16 font-medium">
+        <div>join</div>{" "}
+        <div className="flex relative items-center sm:mx-2 sm:w-28 w-32">
           <div className="absolute left-0">
             <Image
               height={40}
@@ -44,11 +44,11 @@ function Hero() {
             />
           </div>
         </div>{" "}
-        in building your financial credibility
+        <div>in building your financial credibility</div>
       </div>
 
-      <div className="flex items-center justify-between mt-14">
-        <button className="px-24 py-5 bg-primary rounded-lg text-black text-lg font-semibold mr-6 filter hover:brightness-110">
+      <div className="flex sm:flex-row flex-col items-center sm:justify-between sm:mt-14 mt-20">
+        <button className="px-24 py-5 bg-primary rounded-lg text-black text-lg sm:mb-0 mb-6 font-semibold sm:mr-6 filter hover:brightness-110">
           start building
         </button>
         <button className="px-16 py-5 border border-primary rounded-lg text-lg font-semibold flex justify-center items-center hover:text-black hover:bg-primary">

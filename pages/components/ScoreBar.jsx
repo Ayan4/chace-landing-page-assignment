@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import data from "../../scoreData.json";
 
 function ScoreBar() {
   const [selectedBar, setSelectedBar] = useState("average");
   const [xOffset, setXOffset] = useState(50);
+  const [screenWidth, setScreenWidth] = useState("");
+
+  useEffect(() => {
+    const updateSize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", updateSize);
+
+    return () => {
+      window.removeEventListener("resize", updateSize);
+    };
+  });
 
   const data = {
     "very poor": {
@@ -49,8 +61,8 @@ function ScoreBar() {
       <div className="flex">
         <div className="flex flex-col w-[30%] mr-1.5">
           <div className="flex justify-between items-center px-1.5 mb-1.5">
-            <p>300</p>
-            <p>500</p>
+            <p className="sm:block hidden">300</p>
+            <p className="sm:block hidden">500</p>
           </div>
           <div className="flex items-center">
             <div
@@ -67,8 +79,8 @@ function ScoreBar() {
 
         <div className="flex flex-col w-[25%] mr-1.5">
           <div className="flex justify-between items-center px-1.5 mb-1.5">
-            <p>501</p>
-            <p>650</p>
+            <p className="sm:block hidden">501</p>
+            <p className="sm:block hidden">650</p>
           </div>
           <div className="flex items-center">
             <span className="w-1.5 h-1 bg-gray-300"></span>
@@ -86,8 +98,8 @@ function ScoreBar() {
 
         <div className="flex flex-col w-[20%] mr-1.5">
           <div className="flex justify-between items-center px-1.5 mb-1.5">
-            <p>651</p>
-            <p>750</p>
+            <p className="sm:block hidden">651</p>
+            <p className="sm:block hidden">750</p>
           </div>
           <div className="flex items-center">
             <span className="w-1.5 h-1 bg-gray-300"></span>
@@ -105,8 +117,8 @@ function ScoreBar() {
 
         <div className="flex flex-col w-[15%] mr-1.5">
           <div className="flex justify-between items-center px-1.5 mb-1.5">
-            <p>751</p>
-            <p>850</p>
+            <p className="sm:block hidden">751</p>
+            <p className="sm:block hidden">850</p>
           </div>
           <div className="flex items-center">
             <span className="w-1.5 h-1 bg-gray-300"></span>
@@ -124,8 +136,8 @@ function ScoreBar() {
 
         <div className="flex flex-col w-[10%] mr-1.5">
           <div className="flex justify-between items-center px-1.5 mb-1.5">
-            <p>851</p>
-            <p>900</p>
+            <p className="sm:block hidden">851</p>
+            <p className="sm:block hidden">900</p>
           </div>
           <div className="flex items-center">
             <span className="w-1.5 h-1 bg-gray-300"></span>
@@ -142,12 +154,14 @@ function ScoreBar() {
       </div>
 
       <div
-        style={{ left: `${xOffset}%` }}
-        className={`absolute top-14 w-[21.5rem] transition-all duration-700 ease-in-out`}
+        style={{ left: `${screenWidth < 640 ? "0" : xOffset}%` }}
+        className={`absolute top-14 w-[21.5rem] left-0 transition-all duration-700 ease-in-out`}
       >
         <Image
-          width={340}
-          height={190}
+          // width={340}
+          // height={190}
+          width={screenWidth < 640 ? "600" : "340"}
+          height={screenWidth < 640 ? "370" : "190"}
           src={data[selectedBar].source}
           alt="card"
         />

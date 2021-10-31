@@ -10,8 +10,8 @@ import { FaFacebook } from "react-icons/fa";
 function Footer() {
   return (
     <div className="mb-8 mt-52">
-      <div className="flex justify-between">
-        <div className="w-2/5">
+      <div className="flex sm:flex-row flex-col justify-between items-center">
+        <div className="sm:w-2/5">
           <Image
             src="https://www.chace.co.in/images/partner.png"
             alt="secure"
@@ -19,19 +19,19 @@ function Footer() {
             height={230}
           />
         </div>
-        <div className="flex flex-col w-3/5">
-          <h2 className="text-5xl text-primary font-bold leading-tight">
+        <div className="flex flex-col sm:w-3/5 w-full">
+          <h2 className="sm:text-5xl text-4xl sm:mt-0 mt-14 text-primary font-bold leading-tight">
             partnering with the best to secure your money
           </h2>
-          <p className="text-3xl mt-8 leading-tight">
+          <p className="sm:text-3xl text-xl mt-8 leading-tight">
             Our partner bank hosts your account and follows all security
             standards as per RBI regulations
           </p>
         </div>
       </div>
 
-      <div className="bg-primary mt-48 rounded-lg p-8 flex items-start">
-        <ul className="border-r-2 border-gray-900 border-opacity-60 p-2">
+      <div className="bg-primary mt-48 rounded-lg p-8 flex sm:flex-row flex-col items-start">
+        <ul className="sm:border-r-2 sm:border-gray-900 sm:border-opacity-60 p-2">
           <li className="flex text-gray-900 items-center m-6">
             <BsFillCheckCircleFill className="text-3xl mr-6" />
             <p className="text-xl font-semibold">100% Instant Approval</p>
