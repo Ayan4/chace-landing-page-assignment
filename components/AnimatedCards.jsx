@@ -3,7 +3,7 @@ import { BiRupee } from "react-icons/bi";
 import { FaPercent } from "react-icons/fa";
 import { AiOutlineCheck } from "react-icons/ai";
 import { useState, useEffect } from "react";
-// import Carousel from "react-elastic-carousel";
+import Carousel from "react-elastic-carousel";
 
 function AnimatedCards() {
   const [screenWidth, setScreenWidth] = useState("");
@@ -97,9 +97,8 @@ function AnimatedCards() {
       </div>
 
       {screenWidth < 640 && (
-        // <Carousel className="mt-10">
-        <div className="mt-10">
-          <div className="w-full my-7 relative">
+        <Carousel className="mt-10">
+          <div className="w-full relative">
             <Image
               src="https://www.chace.co.in/images/info-card.png"
               alt="animated-card"
@@ -116,7 +115,7 @@ function AnimatedCards() {
             </div>
           </div>
 
-          <div className="w-full my-7 relative">
+          <div className="w-full relative">
             <Image
               src="https://www.chace.co.in/images/info-card.png"
               alt="animated-card"
@@ -133,7 +132,7 @@ function AnimatedCards() {
             </div>
           </div>
 
-          <div className="w-full my-7 relative">
+          <div className="w-full relative">
             <Image
               src="https://www.chace.co.in/images/info-card.png"
               alt="animated-card"
@@ -149,7 +148,7 @@ function AnimatedCards() {
               </p>
             </div>
           </div>
-        </div>
+        </Carousel>
       )}
     </div>
   );
