@@ -5,6 +5,7 @@ import CreditScoreBar from "./components/CreditScoreBar";
 import AnimatedCards from "./components/AnimatedCards";
 import ChaceHelp from "./components/ChaceHelp";
 import VideoContainer from "./components/VideoContainer";
+import GetStartedCard from "./components/GetStartedCard";
 
 function Home() {
   return (
@@ -32,6 +33,7 @@ function Home() {
       <VideoContainer />
 
       {/* partnering with chace */}
+      <GetStartedCard />
 
       {/* get started and footer */}
     </div>
