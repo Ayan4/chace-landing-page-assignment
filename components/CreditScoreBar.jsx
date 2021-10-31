@@ -9,7 +9,7 @@ function CreditScoreBar() {
         </h2>
         <h3 className="sm:text-3xl text-xl font-normal sm:w-4/6 w-full sm:mt-0 mt-8 leading-snug">
           Credit score is a 3-digit number between 300 - 900 reflecting how well
-          you’ve managed your money in the past. It's a scorecard of your
+          you’ve managed your money in the past. Its a scorecard of your
           trustworthiness.
         </h3>
       </div>

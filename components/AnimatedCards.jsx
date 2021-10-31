@@ -98,7 +98,7 @@ function AnimatedCards() {
 
       {screenWidth < 640 && (
         <Carousel className="mt-10">
-          <div className="w-full relative">
+          <div className="w-full m-2 relative">
             <Image
               src="https://www.chace.co.in/images/info-card.png"
               alt="animated-card"
@@ -115,7 +115,7 @@ function AnimatedCards() {
             </div>
           </div>
 
-          <div className="w-full relative">
+          <div className="w-full m-2 relative">
             <Image
               src="https://www.chace.co.in/images/info-card.png"
               alt="animated-card"
@@ -132,7 +132,7 @@ function AnimatedCards() {
             </div>
           </div>
 
-          <div className="w-full relative">
+          <div className="w-full m-2 relative">
             <Image
               src="https://www.chace.co.in/images/info-card.png"
               alt="animated-card"
