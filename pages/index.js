@@ -1,11 +1,11 @@
 import Head from "next/Head";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import CreditScoreBar from "./components/CreditScoreBar";
-import AnimatedCards from "./components/AnimatedCards";
-import ChaceHelp from "./components/ChaceHelp";
-import VideoContainer from "./components/VideoContainer";
-import GetStartedCard from "./components/GetStartedCard";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import CreditScoreBar from "../components/CreditScoreBar";
+import AnimatedCards from "../components/AnimatedCards";
+import ChaceHelp from "../components/ChaceHelp";
+import VideoContainer from "../components/VideoContainer";
+import GetStartedCard from "../components/GetStartedCard";
 
 function Home() {
   return (

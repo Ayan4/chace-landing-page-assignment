@@ -9,6 +9,10 @@ function AnimatedCards() {
   const [screenWidth, setScreenWidth] = useState("");
 
   useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
     const updateSize = () => {
       setScreenWidth(window.innerWidth);
     };
